@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>mover-by-days</Name>
+  <Repository>unraiders/mover-by-days</Repository>
+  <Registry>https://hub.docker.com/r/unraiders/mover-by-days/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/unraiders/mover-by-days</Support>
+  <Icon>https://raw.githubusercontent.com/unraiders/mover-by-days/master/mover-by-days-icon.png</Icon>
+  <Overview>
+    Ejecutar rsync con días de antigüedad y teniendo en cuenta hardlinks.
+  </Overview>
+  <Category>Tools:</Category>
+  <Config Name="QBITTORRENT_HOST" Target="QBITTORRENT_HOST" Default="" Mode="" Description="Host y puerto de qBittorrent, ejemplo: 192.168.2.20:8090" Type="Variable" Display="always" Required="true"/>
+  <Config Name="QBITTORRENT_USER" Target="QBITTORRENT_USER" Default="admin" Mode="" Description="Usuario de qBittorrent" Type="Variable" Display="always" Required="true"/>
+  <Config Name="QBITTORRENT_PASSWORD" Target="QBITTORRENT_PASSWORD" Default="admin" Mode="" Description="Contraseña de qBittorrent" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="CACHE_MOUNT" Target="/cache_torrents" Default="/mnt/cache" Mode="ro" Description="Ruta al almacenamiento cache donde se verifican los torrents antes de resumir/pausar, normalmente en el pool ejemplo: /mnt/calentito" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="ORIGEN" Target="/origen" Default="/mnt/" Mode="rw" Description="Carpeta/Share origen desde donde moverá los ficheros y carpetas." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="DESTINO" Target="/destino" Default="/mnt/user0/" Mode="rw" Description="Carpeta/Share destino donde moverá los ficheros y carpetas." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="DEBUG" Target="DEBUG" Default="0|1|2" Mode="" Description="Salida del log: 0 = información básica, 1 = modo debug, 2 = modo superdetalle" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="DAYS_THRESHOLD" Target="DAYS_THRESHOLD" Default="7" Mode="" Description="Número de días de antigüedad para ejecutar el proceso de movimiento con rsync." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="CRON_SCHEDULE" Target="CRON_SCHEDULE" Default="0 7 * * *" Mode="" Description="Hora de ejecutar el script (formato crontab. ej., 0 7 * * * = 7:00 AM, visita https://crontab.guru/ para mas info.)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PRUEBA" Target="PRUEBA" Default="0|1" Mode="" Description="Ejecutar en modo prueba de rsync (1 = ejecución de prueba, 0 = ejecución normal)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SOURCE_PATH" Target="SOURCE_PATH" Default="/origen" Mode="" Description="Ruta origen dentro del contenedor, NO MODIFICAR." Type="Variable" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="DEST_PATH" Target="DEST_PATH" Default="/destino" Mode="" Description="Ruta destino dentro del contenedor, NO MODIFICAR." Type="Variable" Display="advanced" Required="true" Mask="false"/>
+</Container>

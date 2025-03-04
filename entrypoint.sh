@@ -20,6 +20,7 @@ echo "$(date +'%d-%m-%Y %H:%M:%S') Antigüedad días a mover: $DAYS_THRESHOLD"
 echo "$(date +'%d-%m-%Y %H:%M:%S') Programación cron: $CRON_SCHEDULE"
 echo "$(date +'%d-%m-%Y %H:%M:%S') Debug: $DEBUG"
 echo "$(date +'%d-%m-%Y %H:%M:%S') Prueba: $PRUEBA"
+echo "$(date +'%d-%m-%Y %H:%M:%S') Zona horaria: $TZ"
 
 CRON_JOB="$CRON_SCHEDULE python3 /app/sync_files.py >> /proc/1/fd/1 2>> /proc/1/fd/2"
 

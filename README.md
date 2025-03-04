@@ -14,8 +14,8 @@ Funcionamiento:
 
 ## Configuración variables de entorno y rutas.
 
-| CLAVE                | NECESARIO | VALOR                                                                                                                                 |
-| :------------------- | :-------: | :------------------------------------------------------------------------------------------------------------------------------------ |
+| CLAVE                | NECESARIO  | VALOR                                                                                                                                 |
+| :------------------- | :-------:  | :------------------------------------------------------------------------------------------------------------------------------------ |
 | QBITTORRENT_HOST     |     ✅     | Host y puerto de qBittorrent, ejemplo: 192.168.2.20:8090                                                                              |
 | QBITTORRENT_USER     |     ✅     | Usuario de qBittorrent                                                                                                                |
 | QBITTORRENT_PASSWORD |     ✅     | Contraseña de qBittorrent                                                                                                             |
@@ -24,9 +24,9 @@ Funcionamiento:
 | DESTINO              |     ✅     | Carpeta/Share destino dónde moverá los ficheros y carpetas.                                                                           |
 | DAYS_THRESHOLD       |     ✅     | Número de días de antigüedad para ejecutar el proceso de movimiento.                                                                  |
 | CRON_SCHEDULE        |     ✅     | Hora de ejecutar el script (formato crontab. ej., 0 7 * * * = 7:00 AM, visita https://crontab.guru/ para más info.)                   |
-| DEBUG                |     ✅     | Salida del log: 0 = información básica, 1 = modo debug, 2 = modo superdetalle.                                                                                 |
+| DEBUG                |     ✅     | Salida del log: 0 = información básica, 1 = modo debug, 2 = modo superdetalle.                                                        |
 | PRUEBA               |     ✅     | Habilita el modo Prueba, no realiza ninguna modificación. (0 = No / 1 = Si)                                                           |
-
+| TZ                   |     ✅     | Timezone (Por ejemplo: Europe/Madrid)                                                                                                 |
 
   > [!IMPORTANT]
   > Se recomienda hacer uso de la variable PRUEBA = 1 antes de poner el Docker en producción, la ejecución de este Docker implica movimiento de ficheros y nos tenemos que asegurar que el proceso es correcto, con la variable PRUEBA a 1 NO realizará ningún movimiento de ficheros pero tendremos en el log el detalle de los ficheros que movería si estuviera la variable PRUEBA a 0. 

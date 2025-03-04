@@ -24,4 +24,5 @@
   <Config Name="PRUEBA" Target="PRUEBA" Default="0|1" Mode="" Description="Ejecutar en modo prueba de rsync (1 = ejecución de prueba, 0 = ejecución normal)" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="SOURCE_PATH" Target="SOURCE_PATH" Default="/origen" Mode="" Description="Ruta origen dentro del contenedor, NO MODIFICAR." Type="Variable" Display="advanced" Required="true" Mask="false"/>
   <Config Name="DEST_PATH" Target="DEST_PATH" Default="/destino" Mode="" Description="Ruta destino dentro del contenedor, NO MODIFICAR." Type="Variable" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="TZ" Target="TZ" Default="Europe/Madrid" Mode="" Description="Zona horaria" Type="Variable" Display="advanced" Required="true" Mask="false"/> 
 </Container>

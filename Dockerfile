@@ -3,7 +3,7 @@ FROM python:3.12-alpine
 LABEL maintainer="unraiders"
 LABEL description="Ejecutar rsync con días de antigüedad, teniendo en cuenta hardlinks y pausar/reanudar los torrents sedeados en qBittorrent."
 
-ARG VERSION=1.0.1
+ARG VERSION=1.1.0
 ENV VERSION=${VERSION}
 
 # Instalar cron y otros paquetes
